@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/pedsm/dockGraph#readme",
   "dependencies": {
+    "d3": "^5.7.0",
+    "dockerode": "^2.5.7",
     "electron": "^3.0.13"
   }
 }
