@@ -1,0 +1,23 @@
+{
+  "name": "dockgraph",
+  "version": "0.0.1",
+  "description": "A tool for visualising docker networks?",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedsm/dockGraph.git"
+  },
+  "author": "Pedro Mendonca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedsm/dockGraph/issues"
+  },
+  "homepage": "https://github.com/pedsm/dockGraph#readme",
+  "dependencies": {
+    "electron": "^3.0.13"
+  }
+}
