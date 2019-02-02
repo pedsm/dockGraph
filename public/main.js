@@ -72,14 +72,14 @@ function render() {
         .enter().append('g')
         .attr('class', 'node')
         .attr('', d => {log(`entering`, d)})
-
-    newNode.append("circle")
-        .attr("r", 5)
-        .attr("fill", (d, i) => color(i))
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
             .on("end", dragended))
+
+    newNode.append("circle")
+        .attr("r", 5)
+        .attr("fill", (d, i) => color(i))
 
     newNode.append("text")
         .text(d => d.Names[0])
@@ -116,6 +116,10 @@ function ticked() {
     //     .attr("y1", function(d) { return d.source.y; })
     //     .attr("x2", function(d) { return d.target.x; })
     //     .attr("y2", function(d) { return d.target.y; });
+    if(node == undefined) {
+        // Not yet loaded
+        return
+    }
     node.attr("transform", function (d) {
         if(Number.isNaN(d.x)){
             // log(d.x, JSON.parse(JSON.stringify(d)))
