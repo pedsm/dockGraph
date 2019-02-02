@@ -78,13 +78,14 @@ function render() {
             .on("end", dragended))
 
     newNode.append("circle")
-        .attr("r", 5)
+        .attr("r", 10)
         .attr("fill", (d, i) => color(i))
 
     newNode.append("text")
         .text(d => d.Names[0])
-        .attr('x', 6)
-        .attr('y', 3);
+        .attr('text-anchor', 'middle')
+        .attr('x', 0)
+        .attr('y', 30);
 
     node = newNode.merge(node)
     simulation.nodes(containers)
